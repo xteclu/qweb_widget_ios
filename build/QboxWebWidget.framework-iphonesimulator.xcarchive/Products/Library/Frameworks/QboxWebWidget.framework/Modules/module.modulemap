@@ -1,0 +1,11 @@
+framework module QboxWebWidget {
+  umbrella header "QboxWebWidget.h"
+
+  export *
+  module * { export * }
+}
+
+module QboxWebWidget.Swift {
+  header "QboxWebWidget-Swift.h"
+  requires objc
+}
