@@ -22,6 +22,13 @@
         "moduleName": "QboxWebWidget"
       },
       {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "QboxWebWidget"
+      },
+      {
         "kind": "TypeDecl",
         "name": "Language",
         "printedName": "Language",
@@ -1132,6 +1139,73 @@
         "printedName": "WebViewController",
         "children": [
           {
+            "kind": "Function",
+            "name": "webView",
+            "printedName": "webView(_:requestMediaCapturePermissionFor:initiatedByFrame:type:decisionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKSecurityOrigin",
+                "printedName": "WebKit.WKSecurityOrigin",
+                "usr": "c:objc(cs)WKSecurityOrigin"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKFrameInfo",
+                "printedName": "WebKit.WKFrameInfo",
+                "usr": "c:objc(cs)WKFrameInfo"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKMediaCaptureType",
+                "printedName": "WebKit.WKMediaCaptureType",
+                "usr": "c:@E@WKMediaCaptureType"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WebKit.WKPermissionDecision) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKPermissionDecision",
+                    "printedName": "WebKit.WKPermissionDecision",
+                    "usr": "c:@E@WKPermissionDecision"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@QboxWebWidget@objc(cs)WebViewController(im)webView:requestMediaCapturePermissionForOrigin:initiatedByFrame:type:decisionHandler:",
+            "mangledName": "$s13QboxWebWidget0B14ViewControllerC03webD0_32requestMediaCapturePermissionFor16initiatedByFrame4type15decisionHandlerySo05WKWebD0C_So16WKSecurityOriginCSo11WKFrameInfoCSo07WKMediaI4TypeVySo20WKPermissionDecisionVctF",
+            "moduleName": "QboxWebWidget",
+            "intro_iOS": "15.0",
+            "objc_name": "webView:requestMediaCapturePermissionForOrigin:initiatedByFrame:type:decisionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "Custom",
+              "AccessControl",
+              "Available"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(settings:)",
@@ -1837,35 +1911,35 @@
     {
       "filePath": "\/Users\/nurkentileubergenov\/XCodeProjects\/qweb-widget\/QboxWebWidget\/Models\/SettingsModel.swift",
       "kind": "StringLiteral",
-      "offset": 159,
+      "offset": 172,
       "length": 10,
       "value": "\"[QboxWW]\""
     },
     {
       "filePath": "\/Users\/nurkentileubergenov\/XCodeProjects\/qweb-widget\/QboxWebWidget\/Models\/SettingsModel.swift",
       "kind": "StringLiteral",
-      "offset": 181,
+      "offset": 194,
       "length": 28,
       "value": "\"📕 error: \""
     },
     {
       "filePath": "\/Users\/nurkentileubergenov\/XCodeProjects\/qweb-widget\/QboxWebWidget\/Models\/SettingsModel.swift",
       "kind": "StringLiteral",
-      "offset": 208,
+      "offset": 221,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/nurkentileubergenov\/XCodeProjects\/qweb-widget\/QboxWebWidget\/Models\/SettingsModel.swift",
       "kind": "StringLiteral",
-      "offset": 221,
+      "offset": 234,
       "length": 27,
       "value": "\"📘 note: \""
     },
     {
       "filePath": "\/Users\/nurkentileubergenov\/XCodeProjects\/qweb-widget\/QboxWebWidget\/Models\/SettingsModel.swift",
       "kind": "StringLiteral",
-      "offset": 247,
+      "offset": 260,
       "length": 1,
       "value": "\"\""
     },
@@ -3419,21 +3493,21 @@
     {
       "filePath": "\/Users\/nurkentileubergenov\/XCodeProjects\/qweb-widget\/QboxWebWidget\/QWebWidgetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1593,
+      "offset": 1931,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/nurkentileubergenov\/XCodeProjects\/qweb-widget\/QboxWebWidget\/QWebWidgetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1619,
+      "offset": 1957,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/nurkentileubergenov\/XCodeProjects\/qweb-widget\/QboxWebWidget\/QWebWidgetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1819,
+      "offset": 2157,
       "length": 5,
       "value": "false"
     },

@@ -237,7 +237,7 @@ open class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelega
     configuration.allowsInlineMediaPlayback = true
     configuration.allowsPictureInPictureMediaPlayback = true
     configuration.ignoresViewportScaleLimits = true
-    configuration.mediaTypesRequiringUserActionForPlayback = .all
+//    configuration.mediaTypesRequiringUserActionForPlayback = .all // Ломает видео
     if #available(iOS 14, *){
       configuration.defaultWebpagePreferences.allowsContentJavaScript = true
     } else {

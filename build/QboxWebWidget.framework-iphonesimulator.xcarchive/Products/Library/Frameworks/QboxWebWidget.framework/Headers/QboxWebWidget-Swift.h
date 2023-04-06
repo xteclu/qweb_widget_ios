@@ -254,16 +254,18 @@ using UInt = size_t;
 
 #if defined(__OBJC__)
 
-@class NSCoder;
 @class WKWebView;
-@class NSString;
+@class WKSecurityOrigin;
 @class WKFrameInfo;
+@class NSCoder;
+@class NSString;
 @class WKNavigation;
 @class WKNavigationAction;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC13QboxWebWidget17WebViewController")
 @interface WebViewController : UIViewController <SFSafariViewControllerDelegate, WKNavigationDelegate, WKUIDelegate>
+- (void)webView:(WKWebView * _Nonnull)webView requestMediaCapturePermissionForOrigin:(WKSecurityOrigin * _Nonnull)origin initiatedByFrame:(WKFrameInfo * _Nonnull)frame type:(WKMediaCaptureType)type decisionHandler:(void (^ _Nonnull)(WKPermissionDecision))decisionHandler SWIFT_AVAILABILITY(ios,introduced=15.0);
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)webView:(WKWebView * _Nonnull)webView runJavaScriptAlertPanelWithMessage:(NSString * _Nonnull)message initiatedByFrame:(WKFrameInfo * _Nonnull)frame completionHandler:(void (^ _Nonnull)(void))completionHandler;
 - (void)webView:(WKWebView * _Nonnull)webView runJavaScriptConfirmPanelWithMessage:(NSString * _Nonnull)message initiatedByFrame:(WKFrameInfo * _Nonnull)frame completionHandler:(void (^ _Nonnull)(BOOL))completionHandler;
@@ -538,16 +540,18 @@ using UInt = size_t;
 
 #if defined(__OBJC__)
 
-@class NSCoder;
 @class WKWebView;
-@class NSString;
+@class WKSecurityOrigin;
 @class WKFrameInfo;
+@class NSCoder;
+@class NSString;
 @class WKNavigation;
 @class WKNavigationAction;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC13QboxWebWidget17WebViewController")
 @interface WebViewController : UIViewController <SFSafariViewControllerDelegate, WKNavigationDelegate, WKUIDelegate>
+- (void)webView:(WKWebView * _Nonnull)webView requestMediaCapturePermissionForOrigin:(WKSecurityOrigin * _Nonnull)origin initiatedByFrame:(WKFrameInfo * _Nonnull)frame type:(WKMediaCaptureType)type decisionHandler:(void (^ _Nonnull)(WKPermissionDecision))decisionHandler SWIFT_AVAILABILITY(ios,introduced=15.0);
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)webView:(WKWebView * _Nonnull)webView runJavaScriptAlertPanelWithMessage:(NSString * _Nonnull)message initiatedByFrame:(WKFrameInfo * _Nonnull)frame completionHandler:(void (^ _Nonnull)(void))completionHandler;
 - (void)webView:(WKWebView * _Nonnull)webView runJavaScriptConfirmPanelWithMessage:(NSString * _Nonnull)message initiatedByFrame:(WKFrameInfo * _Nonnull)frame completionHandler:(void (^ _Nonnull)(BOOL))completionHandler;

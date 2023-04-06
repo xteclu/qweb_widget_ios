@@ -50,6 +50,8 @@ public struct User {
   public init(id: Swift.Int? = nil, firstName: Swift.String? = nil, lastName: Swift.String? = nil, patronymic: Swift.String? = nil, birthDate: Foundation.Date? = nil, iin: Swift.String? = nil, phoneNumber: Swift.String? = nil, dynamicAttrs: [Swift.String : Any?] = [:])
 }
 @objc @_Concurrency.MainActor(unsafe) open class WebViewController : UIKit.UIViewController, WebKit.WKUIDelegate, WebKit.WKNavigationDelegate, SafariServices.SFSafariViewControllerDelegate {
+  @available(iOS 15.0, *)
+  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, requestMediaCapturePermissionFor origin: WebKit.WKSecurityOrigin, initiatedByFrame frame: WebKit.WKFrameInfo, type: WebKit.WKMediaCaptureType, decisionHandler: @escaping (WebKit.WKPermissionDecision) -> Swift.Void)
   @_Concurrency.MainActor(unsafe) public init(settings: QboxWebWidget.Settings)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init(coder: Foundation.NSCoder)
   @_Concurrency.MainActor(unsafe) public func reloadPage()
