@@ -29,7 +29,7 @@ open class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelega
       fatalError("init(coder:) has not been implemented")
   }
   
-  public func callStateHandler(_ message: [String: Any]) {
+  open func callStateHandler(_ message: [String: Any]) {
     print(message)
   }
   
