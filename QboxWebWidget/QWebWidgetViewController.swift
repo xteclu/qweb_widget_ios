@@ -10,7 +10,7 @@ import WebKit
 import SafariServices
 
 
-open class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, SFSafariViewControllerDelegate {
+open class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, SFSafariViewControllerDelegate, WKScriptMessageHandler {
   let settings: Settings
   
   @available(iOS 15.0, *)
@@ -28,7 +28,11 @@ open class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelega
   public required init(coder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
   }
-
+  
+  public func callStateHandler(_ message: [String: Any]) {
+    print(message)
+  }
+  
   public func reloadPage() {
     webView?.reload()
   }
@@ -145,6 +149,9 @@ open class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelega
     closePreviewButton.addTarget(self, action: #selector(closePreview), for: .touchUpInside)
 
     UISetup()
+
+    let contentController = webView.configuration.userContentController
+    contentController.add(self, name: "callStateHandler")
     
     if let url = generateUrl() {
       dev{print(mNot, "url", url)}
@@ -226,6 +233,15 @@ open class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelega
     decisionHandler(.allow)
   }
   
+  public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+    guard let body = message.body as? [String : Any] else {
+      return
+    }
+    
+    if (message.name == "callStateHandler"){
+      self.callStateHandler(body)
+    }
+  }
   //  MARK: Configuration
   private func genWVConfig() -> WKWebViewConfiguration{
     let preferences = WKPreferences()
